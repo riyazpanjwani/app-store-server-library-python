@@ -1,13 +1,13 @@
 # Copyright (c) 2023 Apple Inc. Licensed under MIT License.
-from typing import Optional
 
+from typing import Optional
 from attr import define
 import attr
 
 @define
-class ExtendRenewalDateResponse: 
+class ExtendRenewalDateResponse:
     """
-    A response that indicates whether an individual renewal-date extension succeeded, and related details.
+    A response that indicates whether an individual subscription-renewal-date extension succeeded, and related details.
     
     https://developer.apple.com/documentation/appstoreserverapi/extendrenewaldateresponse
     """
@@ -21,7 +21,7 @@ class ExtendRenewalDateResponse:
 
     webOrderLineItemId: Optional[str] = attr.ib(default=None)
     """
-    The unique identifier of subscription-purchase events across devices, including renewals.
+    A unique identifier for purchase events across devices, including subscription-renewal events.
     
     https://developer.apple.com/documentation/appstoreserverapi/weborderlineitemid
     """

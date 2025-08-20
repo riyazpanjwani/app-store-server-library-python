@@ -1,13 +1,13 @@
 # Copyright (c) 2023 Apple Inc. Licensed under MIT License.
-from typing import Optional
 
+from typing import Optional
 from attr import define
 import attr
 
 from .ExtendReasonCode import ExtendReasonCode
 
 @define
-class ExtendRenewalDateRequest: 
+class ExtendRenewalDateRequest:
     """
     The request body that contains subscription-renewal-extension data for an individual subscription.
     
@@ -17,14 +17,14 @@ class ExtendRenewalDateRequest:
     extendByDays: Optional[int] = attr.ib(default=None)
     """
     The number of days to extend the subscription renewal date.
-
+    
     https://developer.apple.com/documentation/appstoreserverapi/extendbydays
     maximum: 90
     """
 
     extendReasonCode: Optional[ExtendReasonCode] = attr.ib(default=None)
     """
-    The reason code for the subscription date extension
+    The reason code for the subscription-renewal-date extension.
     
     https://developer.apple.com/documentation/appstoreserverapi/extendreasoncode
     """
